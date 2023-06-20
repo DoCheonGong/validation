@@ -1,0 +1,119 @@
+@charset "UTF-8";
+@import "reset";
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+fieldset {
+    border: none;
+}
+
+#join {
+    width: 100%;
+    padding: 150px 0px;
+
+    .inner {
+        width: 1180px;
+        margin: 0 auto;
+
+        h1 {
+            font: bold 60px/1 "Raleway";
+            color: #555;
+            margin-bottom: 50px;
+        }
+
+        table {
+            border-top: 2px solid #333;
+            border-bottom: 2px solid #333;
+
+            th,
+            td {
+                border-bottom: 1px solid #ddd;
+                padding: 15px 25px;
+            }
+
+            th {
+                width: 20%;
+
+                input[type="reset"],
+                input[type="submit"] {
+                    width: 30%;
+                    height: 40px;
+                    border: 1px solid #333;
+                    font: bold 14px/40px "Arial";
+                    color: #555;
+                    cursor: pointer;
+                    margin: 10px;
+                    transition: 0.5s;
+
+                    &:hover {
+                        background-color: #000;
+                        color: #fff;
+                    }
+                }
+            }
+
+            td {
+                border-left: 1px solid #aaa;
+                position: relative;
+
+                #toggleBtn {
+                    position: absolute;
+                    top: 15px;
+                    right: 50%;
+                    width: 34px;
+                    height: 34px;
+                    background-color: #0001;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &::before {
+                        content: "\f06e";
+                        font-family: fontAwesome;
+                    }
+
+                    &.hide::before {
+                        content: "\f070";
+                        font-family: fontAwesome;
+                    }
+                }
+
+                input[type="text"],
+                input[type="password"],
+                select {
+                    position: relative;
+                    width: 40%;
+                    background-color: #0001;
+                    padding: 10px;
+                    border: 1px solid #aaa;
+                }
+
+                input[type="radio"],
+                input[type="checkbox"] {
+                    margin-right: 30px;
+                }
+
+                label {
+                    font: 16px/1 "Arial";
+                }
+
+                textarea {
+                    resize: none;
+                    width: 60%;
+                    height: 150px;
+                    background-color: #0001;
+                    padding: 10px;
+                    border: 1px solid #aaa;
+                }
+
+                // 동적으로 생성될 오류메시지 스타일
+                p {
+                    font: 11px/1 "돋움";
+                    color: hotpink;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}

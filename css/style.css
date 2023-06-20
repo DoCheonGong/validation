@@ -1,0 +1,125 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  position: absolute;
+  top: -9999999px;
+  opacity: 0;
+}
+
+fieldset {
+  border: none;
+}
+
+#join {
+  width: 100%;
+  padding: 150px 0px;
+}
+#join .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+#join .inner h1 {
+  font: bold 60px/1 "Raleway";
+  color: #555;
+  margin-bottom: 50px;
+}
+#join .inner table {
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+}
+#join .inner table th,
+#join .inner table td {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 25px;
+}
+#join .inner table th {
+  width: 20%;
+}
+#join .inner table th input[type=reset],
+#join .inner table th input[type=submit] {
+  width: 30%;
+  height: 40px;
+  border: 1px solid #333;
+  font: bold 14px/40px "Arial";
+  color: #555;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.5s;
+}
+#join .inner table th input[type=reset]:hover,
+#join .inner table th input[type=submit]:hover {
+  background-color: #000;
+  color: #fff;
+}
+#join .inner table td {
+  border-left: 1px solid #aaa;
+  position: relative;
+}
+#join .inner table td #toggleBtn {
+  position: absolute;
+  top: 15px;
+  right: 50%;
+  width: 34px;
+  height: 34px;
+  background-color: rgba(0, 0, 0, 0.0666666667);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#join .inner table td #toggleBtn::before {
+  content: "\f06e";
+  font-family: fontAwesome;
+}
+#join .inner table td #toggleBtn.hide::before {
+  content: "\f070";
+  font-family: fontAwesome;
+}
+#join .inner table td input[type=text],
+#join .inner table td input[type=password],
+#join .inner table td select {
+  position: relative;
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.0666666667);
+  padding: 10px;
+  border: 1px solid #aaa;
+}
+#join .inner table td input[type=radio],
+#join .inner table td input[type=checkbox] {
+  margin-right: 30px;
+}
+#join .inner table td label {
+  font: 16px/1 "Arial";
+}
+#join .inner table td textarea {
+  resize: none;
+  width: 60%;
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.0666666667);
+  padding: 10px;
+  border: 1px solid #aaa;
+}
+#join .inner table td p {
+  font: 11px/1 "돋움";
+  color: hotpink;
+  margin-top: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

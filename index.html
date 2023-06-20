@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- cdn: 게임 클라이언트나 콘텐츠 등을 효율적으로 전달하기 위해서
+    분산된 서버에 데이터를 저장해 사용자에게 전달하는 시스템 -->
+    <script defer src="js/validation.js"></script>
+</head>
+
+<body>
+    <section id="join">
+        <div class="inner">
+            <h1>MEMBERSHIP</h1>
+            <form action="result.html" method="get" id="member">
+                <fieldset>
+                    <legend class="hidden">회원가입 폼 입력 양식</legend>
+                    <table>
+                        <caption class="hidden">회원가입을 위한 ID, Password, Email, 성별, 학력, 취미와 남기는 말을 입력하는 테이블</caption>
+                        <tbody>
+                            <!-- ID -->
+                            <tr>
+                                <th scope="row"><label for="userid">User ID</label></th>
+                                <td>
+                                    <input type="text" name="userid" id="userid" placeholder="ID를 입력하세요">
+                                </td>
+                            </tr>
+                            <!-- Password -->
+                            <tr>
+                                <th scope="row"><label for="password1">Password</label></th>
+                                <td>
+                                    <input type="password" name="password1" id="password1" placeholder="비밀번호를 입력하세요">
+                                    <div id="toggleBtn"></div>
+                                </td>
+                            </tr>
+                            <!-- Password -->
+                            <tr>
+                                <th scope="row"><label for="password2">Password check</label></th>
+                                <td>
+                                    <input type="password" name="password2" id="password2" placeholder="위 비밀번호를 다시 입력">
+                                </td>
+                            </tr>
+                            <!-- Email -->
+                            <tr>
+                                <th scope="row"><label for="email">Email</label></th>
+                                <td>
+                                    <input type="text" name="email" id="email" placeholder="Email을 입력하세요">
+                                </td>
+                            </tr>
+                            <!-- Education -->
+                            <tr>
+                                <th scope="row"><label for="edu">Education</label></th>
+                                <td>
+                                    <select name="edu" id="edu">
+                                        <option value="">나의 학력은?</option>
+                                        <option value="elementary">초등학교 졸업</option>
+                                        <option value="middle">중학교 졸업</option>
+                                        <option value="high">고등학교 졸업</option>
+                                        <option value="college">대학교 졸업</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <!-- Gender (name으로 묶기) -->
+                            <tr>
+                                <th scope="row">Gender</th>
+                                <td>
+                                    <label for="male">Male</label>
+                                    <input type="radio" name="gender" id="male" value="male">
+                                    <label for="female">Female</label>
+                                    <input type="radio" name="gender" id="female" value="female">
+                                </td>
+                            </tr>
+                            <!-- Hobby -->
+                            <tr>
+                                <th scope="row">Hobby</th>
+                                <td>
+                                    <label for="sports">Sports</label>
+                                    <input type="checkbox" name="hobby" id="sports" value="sports">
+                                    <label for="music">Music</label>
+                                    <input type="checkbox" name="hobby" id="music" value="music">
+                                    <label for="game">Game</label>
+                                    <input type="checkbox" name="hobby" id="game" value="game">
+                                    <label for="study">Study</label>
+                                    <input type="checkbox" name="hobby" id="study" value="study">
+                                </td>
+                            </tr>
+                            <!-- Comments -->
+                            <tr>
+                                <th scope="row"><label for="comments">Comments</label></th>
+                                <td>
+                                    <textarea name="comments" id="comments" placeholder="남기는 말을 적어주세요"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">
+                                    <input type="reset" value="Cancel">
+                                    <input type="submit" value="Submit">
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
